@@ -1,0 +1,95 @@
+.%scope file "/home/sogunle/netronome-agilio/toolchain/nfp-sdk-6.0.2/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/home/sogunle/netronome-agilio/toolchain/nfp-sdk-6.0.2/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_209_V$426
+.%arg y 0 y_209_V$427
+.%var result 0 result_209 LIX
+.%scope end
+.%var pif_pkt_info_global 1 _pif_pkt_info_global SEX
+.%scope function pif_global_metadata_init _pif_global_metadata_init "./pif_global.c" 9 16
+.%arg parrep 9 parrep_211_V$42a
+.%var standard_metadata 10 standard_metadata_211 LIX
+.%scope end
+.%scope function pif_global_get_stdmd_egress_spec _pif_global_get_stdmd_egress_spec "./pif_global.c" 18 22
+.%arg parrep 9 parrep_215_V$42c
+.%var standard_metadata 10 standard_metadata_215 LIX
+.%scope end
+.%scope function pif_global_get_stdmd_egress_port _pif_global_get_stdmd_egress_port "./pif_global.c" 24 28
+.%arg parrep 9 parrep_216_V$42f
+.%var standard_metadata 10 standard_metadata_216 LIX
+.%scope end
+.%scope function pif_global_set_stdmd_egress_port _pif_global_set_stdmd_egress_port "./pif_global.c" 30 34
+.%arg parrep 9 parrep_217_V$432
+.%arg port_spec 0 port_spec_217_V$433
+.%var standard_metadata 10 standard_metadata_217 LIX
+.%scope end
+.%scope function pif_global_set_stdmd_instance_type _pif_global_set_stdmd_instance_type "./pif_global.c" 36 40
+.%arg parrep 9 parrep_219_V$435
+.%arg instance_type 0 instance_type_219_V$436
+.%var standard_metadata 10 standard_metadata_219 LIX
+.%scope end
+.%scope function pif_global_set_stdmd_egress_instance _pif_global_set_stdmd_egress_instance "./pif_global.c" 42 46
+.%arg parrep 9 parrep_221_V$438
+.%arg egress_instance 0 egress_instance_221_V$439
+.%var standard_metadata 10 standard_metadata_221 LIX
+.%scope end
+.%type U4
+.%type S40 pif_pkt_info{
+__unnamed 0 2;
+}
+.%type S40 {
+__unnamed 0 3;
+__raw 0 8;
+}
+.%type S40 {
+isl 0:26:6 0;
+pkt_num 0:16:10 0;
+bls 0:14:2 0;
+pkt_len 0:0:14 0;
+split 4:31:1 0;
+resv0 4:29:2 0;
+muptr 4:0:29 0;
+resv2 8:31:1 0;
+ctm_size 8:29:2 0;
+ctm_isl 8:22:7 0;
+seqr 8:17:5 0;
+unseq 8:16:1 0;
+seq 8:0:16 0;
+ig_port 12 4;
+eg_port 16 5;
+pkt_buf 24 6;
+trunc_len 32:18:14 0;
+pkt_pl_off 32:8:10 0;
+resv1 32:3:5 0;
+ipv4_sum_ok 32:2:1 0;
+udp_sum_ok 32:1:1 0;
+tcp_sum_ok 32:0:1 0;
+calc_fld_bmsk 36 0;
+}
+.%type S4 {
+type 0:30:2 0;
+nbi 0:28:2 0;
+port 0:20:8 0;
+resv0 0:0:20 0;
+}
+.%type S4 {
+type 0:30:2 0;
+nbi 0:28:2 0;
+port 0:20:8 0;
+resv0 0:0:20 0;
+}
+.%type P2 7
+.%type U4
+.%type A36 0
+.%type P6 0
+.%type P6 11
+.%type S16 pif_header_standard_metadata{
+clone_spec 0:0:32 0;
+egress_spec 4:16:16 0;
+egress_port 4:0:16 0;
+packet_length 8:18:14 0;
+egress_instance 8:8:10 0;
+instance_type 8:4:4 0;
+_padding_0 8:0:4 0;
+ingress_port 12:22:10 0;
+_padding_1 12:0:22 0;
+}

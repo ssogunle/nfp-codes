@@ -1,0 +1,307 @@
+{
+    "source_info": {
+        "action": {
+            "node_source_map": {
+                "drop_act": {
+                    "debug_state_value": 50331648, 
+                    "label": "pif_action_state_drop_act", 
+                    "live_ranges": null, 
+                    "lineno": "21", 
+                    "filename": "/home/sogunle/nfp-codes/test1/pkt-drp.p4"
+                }
+            }
+        }, 
+        "ctlflow": {
+            "ingress_flow": {
+                "node_source_map": {
+                    "in_tbl": {
+                        "debug_state_value": 33554432, 
+                        "label": "pif_ctlflow_state_ingress_flow_in_tbl", 
+                        "live_ranges": null, 
+                        "lineno": 25, 
+                        "filename": "/home/sogunle/nfp-codes/test1/pkt-drp.p4"
+                    }
+                }
+            }
+        }, 
+        "table_hit": {
+            "node_source_map": {
+                "drop_act": {
+                    "label": "pif_table_hit_drop_act", 
+                    "lineno": null, 
+                    "filename": null
+                }
+            }
+        }, 
+        "parrep": {
+            "node_source_map": {
+                "eth_parse": {
+                    "debug_state_value": 16777217, 
+                    "label": "pif_parrep_state_eth_parse", 
+                    "live_ranges": null, 
+                    "lineno": 16, 
+                    "filename": "/home/sogunle/nfp-codes/test1/pkt-drp.p4"
+                }, 
+                "start": {
+                    "debug_state_value": 16777216, 
+                    "label": "pif_parrep_state_start", 
+                    "live_ranges": null, 
+                    "lineno": 12, 
+                    "filename": "/home/sogunle/nfp-codes/test1/pkt-drp.p4"
+                }
+            }
+        }
+    }, 
+    "parrep": {
+        "tierinfo": {
+            "0": {
+                "header_type_map": {}
+            }, 
+            "1": {
+                "header_type_map": {
+                    "0": [
+                        "eth"
+                    ]
+                }
+            }, 
+            "2": {
+                "header_type_map": {}
+            }
+        }, 
+        "control_off_lw": 0, 
+        "headers": {
+            "eth": {
+                "layout": [
+                    {
+                        "width": 48, 
+                        "attributes": {}, 
+                        "layout": [
+                            {
+                                "width": 32, 
+                                "lmbitoff": 0, 
+                                "name": "__dst_0", 
+                                "fldbitoff": 16
+                            }, 
+                            {
+                                "width": 16, 
+                                "lmbitoff": 32, 
+                                "name": "__dst_1", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "dst", 
+                        "lmoff": 0
+                    }, 
+                    {
+                        "width": 48, 
+                        "attributes": {}, 
+                        "layout": [
+                            {
+                                "width": 16, 
+                                "lmbitoff": 48, 
+                                "name": "__src_0", 
+                                "fldbitoff": 32
+                            }, 
+                            {
+                                "width": 32, 
+                                "lmbitoff": 64, 
+                                "name": "__src_1", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "src", 
+                        "lmoff": 48
+                    }, 
+                    {
+                        "width": 16, 
+                        "attributes": {}, 
+                        "layout": [
+                            {
+                                "width": 16, 
+                                "lmbitoff": 96, 
+                                "name": "ethype", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "ethype", 
+                        "lmoff": 96
+                    }
+                ], 
+                "off_lw": 1
+            }
+        }, 
+        "rt_symbols": {
+            "0": "_parrep_0", 
+            "1": "_parrep_1", 
+            "2": "_parrep_2", 
+            "3": "_parrep_3", 
+            "4": "_parrep_4", 
+            "5": "_parrep_5", 
+            "6": "_parrep_6", 
+            "7": "_parrep_7"
+        }, 
+        "control_layout": [
+            {
+                "width": 1, 
+                "off": 0, 
+                "field": "valid"
+            }, 
+            {
+                "width": 1, 
+                "off": 1, 
+                "field": "t1_valid"
+            }, 
+            {
+                "width": 1, 
+                "off": 2, 
+                "field": "t1_dirty"
+            }, 
+            {
+                "width": 1, 
+                "off": 3, 
+                "field": "t1_orig_len"
+            }
+        ], 
+        "stacked_headers": [], 
+        "metadata": {
+            "standard_metadata": {
+                "layout": [
+                    {
+                        "width": 32, 
+                        "attributes": {}, 
+                        "layout": [
+                            {
+                                "width": 32, 
+                                "lmbitoff": 0, 
+                                "name": "clone_spec", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "clone_spec", 
+                        "lmoff": 0
+                    }, 
+                    {
+                        "width": 16, 
+                        "attributes": {}, 
+                        "layout": [
+                            {
+                                "width": 16, 
+                                "lmbitoff": 32, 
+                                "name": "egress_spec", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "egress_spec", 
+                        "lmoff": 32
+                    }, 
+                    {
+                        "width": 16, 
+                        "attributes": {}, 
+                        "layout": [
+                            {
+                                "width": 16, 
+                                "lmbitoff": 48, 
+                                "name": "egress_port", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "egress_port", 
+                        "lmoff": 48
+                    }, 
+                    {
+                        "width": 14, 
+                        "attributes": {}, 
+                        "layout": [
+                            {
+                                "width": 14, 
+                                "lmbitoff": 64, 
+                                "name": "packet_length", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "packet_length", 
+                        "lmoff": 64
+                    }, 
+                    {
+                        "width": 10, 
+                        "attributes": {}, 
+                        "layout": [
+                            {
+                                "width": 10, 
+                                "lmbitoff": 78, 
+                                "name": "egress_instance", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "egress_instance", 
+                        "lmoff": 78
+                    }, 
+                    {
+                        "width": 4, 
+                        "attributes": {}, 
+                        "layout": [
+                            {
+                                "width": 4, 
+                                "lmbitoff": 88, 
+                                "name": "instance_type", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "instance_type", 
+                        "lmoff": 88
+                    }, 
+                    {
+                        "width": 4, 
+                        "attributes": {
+                            "padding": true
+                        }, 
+                        "layout": [
+                            {
+                                "width": 4, 
+                                "lmbitoff": 92, 
+                                "name": "_padding_0", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "_padding_0", 
+                        "lmoff": 92
+                    }, 
+                    {
+                        "width": 10, 
+                        "attributes": {}, 
+                        "layout": [
+                            {
+                                "width": 10, 
+                                "lmbitoff": 96, 
+                                "name": "ingress_port", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "ingress_port", 
+                        "lmoff": 96
+                    }, 
+                    {
+                        "width": 22, 
+                        "attributes": {
+                            "padding": true
+                        }, 
+                        "layout": [
+                            {
+                                "width": 22, 
+                                "lmbitoff": 106, 
+                                "name": "_padding_1", 
+                                "fldbitoff": 0
+                            }
+                        ], 
+                        "name": "_padding_1", 
+                        "lmoff": 106
+                    }
+                ], 
+                "off_lw": 5
+            }
+        }
+    }, 
+    "counters": {
+        "direct_counter": {}
+    }
+}

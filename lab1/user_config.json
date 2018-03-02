@@ -1,0 +1,11 @@
+{
+	"doc": "Table configurations for pkd-drp.p4",
+	"tables" : {
+		"in_tbl" : {
+			"default_rule" : {
+				"name" : "default",
+				"action" : { "type" : "drop_act" }
+				 }
+			}
+	}
+}

@@ -1,0 +1,13 @@
+run                       00165:     CipUX : 3.4.0.9   
+run                       00166:     date  : 2018-03-01T00:00:00
+run                       00167:     action: cipux_rpc_test_client
+run                       00213:     host  : localhost
+run                       00214:     port  : 27
+run                       00215:     ssl   : 0
+run                       00216:     ttl   : 600
+run                       00222:     url   : http://localhost:27/RPC2
+xmlrpc                    00823: test   : 0000
+xmlrpc                    00824: test nr: 0001
+xmlrpc                    00825: maxtest: 9999
+xmlrpc                    00826: command: ping
+xmlrpc                    00827: url    : http://localhost:27/RPC2

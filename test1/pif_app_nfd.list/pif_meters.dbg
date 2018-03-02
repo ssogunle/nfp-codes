@@ -1,0 +1,7 @@
+.%scope file "/home/sogunle/netronome-agilio/toolchain/nfp-sdk-6.0.2/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/home/sogunle/netronome-agilio/toolchain/nfp-sdk-6.0.2/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_188_V$403
+.%arg y 0 y_188_V$404
+.%var result 0 result_188 LIX
+.%scope end
+.%type U4

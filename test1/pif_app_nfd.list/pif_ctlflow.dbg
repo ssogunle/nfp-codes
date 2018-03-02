@@ -1,0 +1,43 @@
+.%scope file "/home/sogunle/netronome-agilio/toolchain/nfp-sdk-6.0.2/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/home/sogunle/netronome-agilio/toolchain/nfp-sdk-6.0.2/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_209_V$403
+.%arg y 0 y_209_V$404
+.%var result 0 result_209 LIX
+.%scope end
+.%scope function handle_ingress_flow_in_tbl _handle_ingress_flow_in_tbl "out/pif_ctlflow.c" 12 38
+.%arg parrep 1 parrep_211_V$407
+.%arg actbuf 2 actbuf_211_V$408
+.%arg actlen 3 actlen_211_V$409
+.%arg state 4 state_211_V$40a
+.%var action_id 5 action_id_211 LIX
+.%var ret 5 ret_211 LIX
+.%var next_state 5 next_state_211 LIX
+.%scope block 21 26
+.%var result 6 result_212 LIX
+.%scope end
+.%scope end
+.%scope function pif_ctlflow_ingress_flow _pif_ctlflow_ingress_flow "out/pif_ctlflow.c" 42 64
+.%arg start_state 4 start_state_214_V$414
+.%arg parrep 1 parrep_214_V$415
+.%arg actbuf 2 actbuf_214_V$416
+.%var actlen 0 actlen_214 LIX
+.%var totlen 0 totlen_214 LIX
+.%var ret 5 ret_214 LIX
+.%var pif_ctlflow_state_ingress_flow 5 pif_ctlflow_state_ingress_flow_214 LIX
+.%scope end
+.%scope function pif_ctlflow_egress_flow _pif_ctlflow_egress_flow "out/pif_ctlflow.c" 67 70
+.%arg start_state 4 start_state_218_V$41e
+.%arg parrep 1 parrep_218_V$41f
+.%arg actbuf 2 actbuf_218_V$420
+.%scope end
+.%type U4
+.%type P6 0
+.%type P3 0
+.%type P2 0
+.%type P2 5
+.%type I4
+.%type S8 pif_lookup_result{
+action_id 0 7;
+action_len 4 7;
+}
+.%type I4

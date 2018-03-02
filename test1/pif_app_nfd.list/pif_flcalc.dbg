@@ -1,0 +1,23 @@
+.%scope file "/home/sogunle/netronome-agilio/toolchain/nfp-sdk-6.0.2/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/home/sogunle/netronome-agilio/toolchain/nfp-sdk-6.0.2/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 56 71
+.%arg x 0 x_209_V$403
+.%arg y 0 y_209_V$404
+.%var result 0 result_209 LIX
+.%scope end
+.%scope function pif_flcalc_verify _pif_flcalc_verify "out/pif_flcalc.c" 6 11
+.%arg parrep 1 parrep_211_V$407
+.%var ctldata 2 ctldata_211 LIX
+.%scope end
+.%scope function pif_flcalc_update _pif_flcalc_update "out/pif_flcalc.c" 13 17
+.%arg parrep 1 parrep_212_V$40a
+.%var ctldata 2 ctldata_212 LIX
+.%scope end
+.%type U4
+.%type P6 0
+.%type P6 3
+.%type S4 pif_parrep_ctldata{
+valid 0:31:1 0;
+t1_valid 0:30:1 0;
+t1_dirty 0:29:1 0;
+t1_orig_len 0:28:1 0;
+}

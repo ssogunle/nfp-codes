@@ -1,0 +1,115 @@
+##########################################
+# Header instance definitions            #
+##########################################
+
+eth :
+    type : header
+    fields : 
+        - dst : 48
+        - src : 48
+        - ethype : 16
+
+standard_metadata :
+    type : metadata
+    fields : 
+        - ingress_port : 10
+        - packet_length : 14
+        - egress_spec : 16
+        - egress_port : 16
+        - egress_instance : 10
+        - instance_type : 4
+        - clone_spec : 32
+        - _padding : 2
+
+##########################################
+# Parse states                           #
+##########################################
+
+start :
+    type : parse_state
+    src_filename : /home/sogunle/nfp-codes/lab1/pkt-drp.p4
+    src_lineno : 12
+
+eth_parse :
+    type : parse_state
+    extracts :
+        - eth
+    src_filename : /home/sogunle/nfp-codes/lab1/pkt-drp.p4
+    src_lineno : 16
+
+##########################################
+# Parser                                 #
+##########################################
+
+parser :
+    type : parser
+    format : dot
+    start_state : start
+    implementation : >-
+        digraph {
+            start -> eth_parse [value="default", mask="none", order="0"]
+            eth_parse -> in_tbl [value="default", mask="none", order="0"]
+        }
+
+##########################################
+# Action sets                            #
+##########################################
+
+drop_act :
+    type : action
+    src_filename : "/home/sogunle/nfp-codes/lab1/pkt-drp.p4"
+    src_lineno : "21"
+    implementation : >-
+        drop();
+
+##########################################
+# Ingress and Egress tables              #
+##########################################
+
+in_tbl:
+    type : table
+    allowed_actions : 
+        - drop_act
+    src_filename : /home/sogunle/nfp-codes/lab1/pkt-drp.p4
+    src_lineno : 25
+
+##########################################
+# Ingress conditionals sets              #
+##########################################
+
+##########################################
+# Ingress control flow                   #
+##########################################
+
+ingress_flow:
+    type : control_flow
+    doc : "control flow for ingress"
+    format : dot
+    start_state : in_tbl
+    implementation : >-
+        digraph {
+            in_tbl -> exit_control_flow [action = always]
+        }
+
+##########################################
+# Processor layout                       #
+##########################################
+
+layout:
+    type : processor_layout
+    format : list
+    implementation :
+        - parser
+        - ingress
+
+##########################################
+# Source info                            #
+##########################################
+
+source_info :
+    type : source_info
+    date : 2018/03/01 09:56:43
+    source_files : 
+        - pkt-drp.p4
+    output_file : pkd-drp.yml
+

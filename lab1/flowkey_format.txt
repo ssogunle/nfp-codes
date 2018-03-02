@@ -1,0 +1,6 @@
+{'flowkey_sz_lw': 1,
+ 'lookup_fields': [],
+ 'metadata_fields': [],
+ 'metadata_packed': OrderedDict(),
+ 'metadata_packed_width': 0,
+ 'tier_hdrs': OrderedDict([(0, OrderedDict([('start', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})])), (1, OrderedDict([('eth_parse', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})])), (2, OrderedDict([('in_tbl', {'total_width': 0, 'raw': OrderedDict(), 'packed': OrderedDict()})]))])}

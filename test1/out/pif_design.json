@@ -1,0 +1,106 @@
+{
+    "generic": {
+        "tables_info": {
+            "in_tbl": {
+                "max_entries": 1, 
+                "allowed_actions": [
+                    "drop_act"
+                ], 
+                "name": "in_tbl"
+            }
+        }, 
+        "action_info": {
+            "drop_act": {
+                "name": "drop_act", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }
+        }
+    }, 
+    "vendor": {
+        "register_info": {}, 
+        "backend_source_info": {
+            "date": "2018/03/01 13:31:17", 
+            "source_files": "pkt-drp.yml"
+        }, 
+        "counters_info": {}, 
+        "meter_info": {}, 
+        "frontend_source_info": {
+            "date": "2018/03/01 13:31:16", 
+            "source_files": [
+                "pkt-drp.p4"
+            ]
+        }, 
+        "tables_info": {
+            "in_tbl": {
+                "name": "in_tbl", 
+                "matches": [], 
+                "allowed_actions": [
+                    "drop_act"
+                ], 
+                "id": 0, 
+                "max_entries": 1, 
+                "data_shift": 4, 
+                "data_size": 16
+            }
+        }, 
+        "action_info": {
+            "drop_act": {
+                "action_data_packed": [
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }
+                ], 
+                "name": "drop_act", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "noeffect": false, 
+                "id": 0, 
+                "tableno_field": "__pif_table_no"
+            }
+        }, 
+        "multicast": {
+            "table_rtsym": "_pif_mcast_table", 
+            "group_count": 16, 
+            "group_size": 16
+        }, 
+        "build_uuid": [
+            1754974912, 
+            2533294110, 
+            492048872, 
+            3521850803
+        ], 
+        "parser_value_set_info": {}, 
+        "digests_info": {}
+    }
+}
